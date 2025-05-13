@@ -32,8 +32,9 @@ const StickyBlogSidebar: React.FC<StickyBlogSidebarProps> = ({ recentPosts, feat
 
   const renderPost = (post: BlogPost) => (
     <motion.div
+      key={post.id}
       variants={itemVariants}
-      className="group flex gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200"
+      className="group flex gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200 dark:hover:bg-gray-800"
     >
       <div className="relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden">
         <img
@@ -43,10 +44,10 @@ const StickyBlogSidebar: React.FC<StickyBlogSidebarProps> = ({ recentPosts, feat
         />
       </div>
       <div className="flex-1 min-w-0">
-        <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
+        <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
           {post.title}
         </h4>
-        <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
+        <div className="flex items-center gap-3 mt-2 text-xs text-gray-500 dark:text-gray-400">
           <div className="flex items-center gap-1">
             <FiClock className="w-3 h-3" />
             {post.readTime}
@@ -68,10 +69,10 @@ const StickyBlogSidebar: React.FC<StickyBlogSidebarProps> = ({ recentPosts, feat
       className="sticky top-24 w-full lg:w-80 space-y-8"
     >
       {/* Featured Posts */}
-      <motion.div className="bg-white rounded-2xl shadow-sm p-6">
+      <motion.div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6">
         <div className="flex items-center gap-2 mb-6">
           <FiStar className="w-5 h-5 text-yellow-500" />
-          <h3 className="text-lg font-semibold text-gray-900">Featured Posts</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Featured Posts</h3>
         </div>
         <div className="space-y-4">
           {featuredPosts.slice(0, 3).map((post) => renderPost(post))}
@@ -79,10 +80,10 @@ const StickyBlogSidebar: React.FC<StickyBlogSidebarProps> = ({ recentPosts, feat
       </motion.div>
 
       {/* Recent Posts */}
-      <motion.div className="bg-white rounded-2xl shadow-sm p-6">
+      <motion.div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6">
         <div className="flex items-center gap-2 mb-6">
           <FiClock className="w-5 h-5 text-blue-500" />
-          <h3 className="text-lg font-semibold text-gray-900">Recent Posts</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Recent Posts</h3>
         </div>
         <div className="space-y-4">
           {recentPosts.slice(0, 5).map((post) => renderPost(post))}

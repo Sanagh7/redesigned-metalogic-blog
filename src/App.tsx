@@ -20,7 +20,7 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen w-full ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
+    <div className="min-h-screen w-full bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
       <Navbar isDarkMode={isDarkMode} onDarkModeToggle={handleDarkModeToggle} />
       <main className="pt-16"> {/* Add padding-top to account for fixed navbar */}
         <BlogPage />
