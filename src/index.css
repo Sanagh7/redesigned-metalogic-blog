@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply m-0 min-h-screen w-full bg-gray-50 transition-colors duration-200;
+  }
+
+  /* Add smooth transitions for theme changes */
+  *, *::before, *::after {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Dark mode styles */
+.dark body {
+  @apply bg-gray-900;
+}
+
+/* Remove the old styles that might conflict with Tailwind */
