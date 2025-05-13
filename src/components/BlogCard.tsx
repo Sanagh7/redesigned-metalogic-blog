@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { FiClock, FiUser, FiArrowRight, FiEye, FiHeart, FiTag } from 'react-icons/fi';
+import { FiClock, FiArrowRight, FiEye, FiHeart, FiTag } from 'react-icons/fi';
 import type { BlogPost } from '../data/blogPosts';
 import BlogPostModal from './BlogPostModal';
 

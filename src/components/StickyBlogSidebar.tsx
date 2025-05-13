@@ -30,7 +30,7 @@ const StickyBlogSidebar: React.FC<StickyBlogSidebarProps> = ({ recentPosts, feat
     }
   };
 
-  const renderPost = (post: BlogPost, index: number) => (
+  const renderPost = (post: BlogPost) => (
     <motion.div
       variants={itemVariants}
       className="group flex gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200"
@@ -74,7 +74,7 @@ const StickyBlogSidebar: React.FC<StickyBlogSidebarProps> = ({ recentPosts, feat
           <h3 className="text-lg font-semibold text-gray-900">Featured Posts</h3>
         </div>
         <div className="space-y-4">
-          {featuredPosts.slice(0, 3).map((post, index) => renderPost(post, index))}
+          {featuredPosts.slice(0, 3).map((post) => renderPost(post))}
         </div>
       </motion.div>
 
@@ -85,7 +85,7 @@ const StickyBlogSidebar: React.FC<StickyBlogSidebarProps> = ({ recentPosts, feat
           <h3 className="text-lg font-semibold text-gray-900">Recent Posts</h3>
         </div>
         <div className="space-y-4">
-          {recentPosts.slice(0, 5).map((post, index) => renderPost(post, index))}
+          {recentPosts.slice(0, 5).map((post) => renderPost(post))}
         </div>
       </motion.div>
     </motion.aside>
