@@ -118,12 +118,3 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
 export default CategoryFilter;
 
 // Add this to your global CSS or create a new style block
-const styles = `
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-`;

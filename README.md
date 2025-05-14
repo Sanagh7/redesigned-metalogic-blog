@@ -45,8 +45,8 @@ A modern, accessible, and responsive blog platform built with React, TypeScript,
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/modern-blog-platform.git
-   cd modern-blog-platform
+   git clone https://github.com/Sanagh7/redesigned-metalogic-blog.git
+   cd redesigned-metalogic-blog
    ```
 
 2. **Install dependencies**
@@ -70,17 +70,33 @@ A modern, accessible, and responsive blog platform built with React, TypeScript,
 - **Atomic Design**: Components are organized following atomic design principles
 - **Reusable Components**: Common UI elements are abstracted into reusable components
 - **Smart/Dumb Components**: Clear separation of concerns between container and presentational components
+- **Navigation Flow**: Implemented React Router with dedicated page components (HomePage, BlogPage, BlogDetailPage, NotFoundPage) for improved code organization and navigation experience
 
 ### Styling Strategy
 - **Utility-First**: Using Tailwind CSS for rapid development and consistent design
 - **CSS Variables**: Custom properties for theme values
 - **Dark Mode**: System-aware with manual toggle option
 - **Responsive Design**: Mobile-first approach with strategic breakpoints
+- **Custom Typography**: Incorporated custom font (tapaikofontnaihamrofont) with adjusted letter spacing for unique brand identity
+- **Visual Hierarchy**: Enhanced spacing, padding, and typography to create clear visual cues for content importance
 
 ### Animation Philosophy
 - **Purpose-Driven**: Animations serve to enhance UX, not distract
 - **Performance**: Hardware-accelerated transforms for smooth animations
 - **Accessibility**: Respects reduced motion preferences
+- **Subtle Feedback**: Added hover effects, transitions, and micro-interactions for user engagement
+- **Contextual Movement**: Used parallax effects and mouse-position tracking in hero sections for depth
+
+### Interactive Elements
+- **User Engagement**: Implemented like, share, and bookmark functionality with visual feedback
+- **Tooltips**: Added tooltips to provide contextual information for user actions
+- **Clickable Features**: Made sidebar elements (Featured and Recent posts) interactive for improved navigation
+- **Visual Feedback**: Used hover states and animations to indicate interactive elements
+
+### Navbar Design
+- **Contextual Transparency**: Made Navbar transparent when at top of blog pages for seamless integration with hero sections
+- **Scroll Awareness**: Added subtle background blur on scroll for improved readability
+- **Brand Identity**: Updated company logo and adjusted "MetaLogic" name with proper spacing
 
 ### Accessibility Considerations
 - **Keyboard Navigation**: All interactive elements are keyboard accessible

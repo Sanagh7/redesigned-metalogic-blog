@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiArrowLeft, FiClock, FiCalendar, FiEye, FiHeart, FiTag, FiShare2, FiBookmark, FiCheck, FiLink } from 'react-icons/fi';
+import { FiArrowLeft, FiClock, FiCalendar, FiEye, FiHeart, FiTag, FiShare2, FiBookmark, FiCheck } from 'react-icons/fi';
 import StickyBlogSidebar from '../components/StickyBlogSidebar';
 import { blogPosts, BlogPost } from '../data/blogPosts';
 import AOS from 'aos';
