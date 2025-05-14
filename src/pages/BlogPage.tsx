@@ -141,7 +141,7 @@ const BlogPage: React.FC = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-800 to-purple-900 py-24 md:py-32"
+        className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-800 to-purple-900 py-24 md:py-32 pt-28 md:pt-40"
       >
         {/* Animated Background Shapes */}
         <div className="absolute inset-0 overflow-hidden">
@@ -228,18 +228,18 @@ const BlogPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+      </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <div className="w-1 h-8 rounded-full bg-white/20 relative overflow-hidden">
+        <div className="absolute bottom-8 left-0 right-0 mx-auto w-fit flex flex-col items-center animate-bounce z-50">
+          <div className="w-1 h-8 rounded-full bg-white/20 relative overflow-hidden backdrop-blur-sm">
             <div className="absolute top-0 left-0 w-full h-full bg-white/80 animate-[scroll_2s_ease-in-out_infinite]" />
           </div>
-          <span className="text-white/60 text-sm mt-2">Scroll to explore</span>
+          <span className="text-white/80 text-sm mt-2 px-4 py-1 rounded-full bg-black/10 backdrop-blur-sm">Scroll to explore</span>
         </div>
       </motion.div>
 
-      <div className="-mt-8 container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
           <motion.div 
@@ -250,7 +250,7 @@ const BlogPage: React.FC = () => {
           >
             {/* Featured Posts Section */}
             {featuredPosts.length > 0 && (
-              <div className="mb-16">
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
                 <motion.div 
                   className="flex items-center gap-3 mb-8"
                   variants={itemVariants}
@@ -280,16 +280,16 @@ const BlogPage: React.FC = () => {
               variants={itemVariants}
             >
               <div className="transform transition-all duration-300 hover:scale-[1.02]">
-                <SearchBar value={searchTerm} onChange={setSearchTerm} />
+        <SearchBar value={searchTerm} onChange={setSearchTerm} />
               </div>
-              <CategoryFilter
-                categories={categories}
-                selected={selectedCategory}
+        <CategoryFilter
+          categories={categories}
+          selected={selectedCategory}
                 onSelect={(category) => {
                   setSelectedCategory(category);
                   setPage(1);
                 }}
-              />
+        />
               
               {filtered.length === 0 ? (
                 <motion.div 
